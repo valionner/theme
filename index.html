@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>IBS+ | كريم تسكين آلام المفاصل - الدفع بعد المعاينة عند الاستلام</title>
+  <meta name="description" content="كريم IBS+ لتخفيف آلام المفاصل والركبة والظهر. تركيبة طبيعية بالجلوكوزامين و MSM والأرنيكا. توصيل مجاني لجميع المدن المغربية والدفع بعد المعاينة عند الاستلام.">
+  <meta property="og:title" content="IBS+ | استرجع حريتك في الحركة">
+  <meta property="og:description" content="تسكين فوري وعلاج طبيعي للمفاصل - التوصيل مجاني والدفع بعد المعاينة عند الاستلام.">
+  <meta property="og:type" content="product">
+
+  <!-- Google Fonts: Cairo / Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E5E3A',
+            'primary-dark': '#16492D',
+            accent: '#28A745',
+            'accent-dark': '#1F8B3A',
+            urgency: '#E53935',
+            lightgray: '#F8F9FA',
+            dark: '#1A1A1A',
+          },
+          fontFamily: {
+            cairo: ['Cairo', 'Tajawal', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Cairo', 'Tajawal', sans-serif; }
+
+    /* Green pulse ring for primary CTAs */
+    @keyframes ctaPulse {
+      0%   { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.55); }
+      70%  { box-shadow: 0 0 0 16px rgba(40, 167, 69, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+    }
+    .animate-cta-pulse { animation: ctaPulse 2.2s infinite; }
+
+    /* FAQ accordion smooth open/close */
+    .faq-panel {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .3s ease;
+    }
+    .faq-panel.open { grid-template-rows: 1fr; }
+    .faq-panel > div { overflow: hidden; }
+
+    /* Bundle card active state */
+    .bundle-card { transition: all .2s ease; }
+    .bundle-card[data-active="true"] {
+      border-color: #28A745 !important;
+      box-shadow: 0 0 0 4px rgba(40, 167, 69, .18), 0 20px 30px -12px rgba(30, 94, 58, .25);
+      transform: translateY(-2px);
+    }
+
+    /* Visible focus for accessibility */
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 3px solid #28A745;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-dark antialiased pb-24 sm:pb-0">
+
+  <!-- ============================================================= -->
+  <!-- 1. TOP ANNOUNCEMENT BAR (Sticky)                               -->
+  <!-- ============================================================= -->
+  <header class="sticky top-0 z-50">
+    <div class="bg-primary text-white text-center text-xs sm:text-sm font-bold py-2.5 px-4 leading-relaxed">
+      🚚 التوصيل مجاني لجميع المدن المغربية + الدفع بعد المعاينة عند الاستلام
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================= -->
+    <!-- 2. HERO SECTION                                                -->
+    <!-- ============================================================= -->
+    <section class="bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14 lg:py-20">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+
+          <!-- Product photo + trust badges (top on mobile / visual left on desktop) -->
+          <div class="relative order-1 lg:order-2">
+            <div class="relative rounded-3xl overflow-hidden bg-lightgray shadow-xl">
+              <img src="images/product-photo.png" alt="كريم IBS+ يُوضع مباشرة على مفصل الركبة"
+                   class="w-full h-auto object-cover" width="1536" height="1024" fetchpriority="high">
+
+              <!-- Official ONSSA logo badge -->
+              <div class="absolute top-3 right-3 bg-white rounded-xl shadow-lg p-1.5">
+                <img src="images/onssa-logo.png" alt="ONSSA - المكتب الوطني للسلامة الصحية للمنتجات الغذائية"
+                     class="h-9 sm:h-11 w-auto rounded-md" width="382" height="78">
+              </div>
+
+              <!-- Product pack shot inset -->
+              <div class="absolute bottom-3 left-3 bg-white rounded-2xl shadow-xl p-1.5 w-24 sm:w-28">
+                <img src="images/product-tube.jpg" alt="أنبوب كريم IBS+ 100 مل" class="w-full rounded-xl" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Trust micro-badges -->
+            <div class="flex flex-wrap gap-2 justify-center mt-4">
+              <span class="bg-white shadow rounded-full px-4 py-2 text-xs font-bold text-accent">🌿 100% طبيعي</span>
+              <span class="bg-white shadow rounded-full px-4 py-2 text-xs font-bold text-primary">✅ معايير ISO</span>
+              <span class="bg-white shadow rounded-full px-4 py-2 text-xs font-bold text-primary">🛡️ مرخص من ONSSA</span>
+            </div>
+          </div>
+
+          <!-- Copy (bottom on mobile / visual right on desktop) -->
+          <div class="order-2 lg:order-1">
+            <span class="inline-flex items-center gap-2 bg-accent/10 text-primary text-xs sm:text-sm font-bold rounded-full px-4 py-2 mb-5">
+              ⚡ تسكين فوري وعلاج طبيعي للمفاصل
+            </span>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold leading-[1.4] text-dark">
+              استرجع حريتك في الحركة وصلي صلاتك واقفا وبدون ألم
+            </h1>
+
+            <p class="mt-5 text-gray-700 text-base sm:text-lg leading-loose">
+              تركيبة علاجية فريدة تجمع بين الجلوكوزامين (Glucosamine) ومركب MSM وخلاصة الأرنيكا والفلفل الأحمر لتخفيف التهاب المفاصل وآلام الركبة والظهر من العمق.
+            </p>
+
+            <!-- Bullets -->
+            <ul class="mt-6 space-y-3.5">
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 w-6 h-6 rounded-full bg-accent/15 text-accent flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span class="text-dark font-semibold">تسكين فوري وتخفيض الانتفاخ في أقل من 120 ثانية.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 w-6 h-6 rounded-full bg-accent/15 text-accent flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span class="text-dark font-semibold">آمن 100% على المعدة - بديل طبيعي للحبوب والمسكنات الكيماوية.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 w-6 h-6 rounded-full bg-accent/15 text-accent flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span class="text-dark font-semibold">مرخص ومطابق لمعايير السلامة الصحية المغربية (ONSSA).</span>
+              </li>
+            </ul>
+
+            <!-- Primary CTA -->
+            <a href="#order-form" data-scroll-to-form
+               class="mt-8 inline-flex w-full sm:w-auto items-center justify-center gap-2 min-h-[56px] px-8 rounded-2xl bg-accent hover:bg-accent-dark text-white text-lg font-extrabold shadow-xl animate-cta-pulse transition-colors">
+              👉 اطلب الآن وافحص طردك قبل الدفع
+            </a>
+
+            <p class="mt-4 text-sm text-gray-600 font-semibold">
+              📦 افتح الصندوق وعاين المنتج بنفسك قبل دفع أي درهم للموزع
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 3. AGITATION & DAILY REALITY                                   -->
+    <!-- ============================================================= -->
+    <section class="bg-lightgray py-14 sm:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-center leading-[1.6] max-w-3xl mx-auto">
+          هل أصبحت الآلام اليومية تحرمك من التمتع بحياتك وبسط أدنى واجباتك؟
+        </h2>
+
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 text-center">
+            <div class="w-16 h-16 mx-auto rounded-2xl bg-urgency/10 text-urgency flex items-center justify-center text-3xl">🕌</div>
+            <h3 class="mt-5 text-xl font-extrabold text-dark">الصلاة على الكرسي</h3>
+            <p class="mt-3 text-gray-600 leading-loose">الشعور بالحرج والألم الشديد عند السجود أو الوقوف في المسجد.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 text-center">
+            <div class="w-16 h-16 mx-auto rounded-2xl bg-urgency/10 text-urgency flex items-center justify-center text-3xl">🪜</div>
+            <h3 class="mt-5 text-xl font-extrabold text-dark">صعوبة المشي وصعود الدرج</h3>
+            <p class="mt-3 text-gray-600 leading-loose">طقطقة الركبتين والتصلب الحاد عند الاستيقاظ صباحاً.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 text-center sm:col-span-2 lg:col-span-1">
+            <div class="w-16 h-16 mx-auto rounded-2xl bg-urgency/10 text-urgency flex items-center justify-center text-3xl">💊</div>
+            <h3 class="mt-5 text-xl font-extrabold text-dark">الخوف من المسكنات</h3>
+            <p class="mt-3 text-gray-600 leading-loose">التردد في شرب الأدوية الكيماوية خوفاً من قرحة المعدة وآثارها على الكلي.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 4. UNIQUE MECHANISM (Educational & Scientific)                 -->
+    <!-- ============================================================= -->
+    <section class="bg-white py-14 sm:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-center leading-[1.6] max-w-3xl mx-auto">
+          لماذا تفشل المراهم العادية وحبوب المسكنات في علاج ألم المفاصل؟
+        </h2>
+
+        <!-- Comparison split -->
+        <div class="mt-10 grid md:grid-cols-2 gap-6">
+          <!-- Wrong approach -->
+          <div class="rounded-2xl border-2 border-urgency/40 bg-urgency/5 p-7">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-full bg-urgency text-white flex items-center justify-center text-xl font-black">✕</span>
+              <h3 class="text-lg font-extrabold text-urgency">المقاربة التقليدية الفاشلة</h3>
+            </div>
+            <p class="mt-4 text-dark leading-loose">
+              المراهم العادية تكتفي بتخدير سطح الجلد لمدة 20 دقيقة دون الوصول للسائل المفصلي، والمسكنات الفموية تسبب قرحة المعدة.
+            </p>
+          </div>
+          <!-- IBS+ solution -->
+          <div class="rounded-2xl border-2 border-accent bg-accent/5 p-7">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center text-xl font-black">✓</span>
+              <h3 class="text-lg font-extrabold text-primary">حل IBS+ العلمي</h3>
+            </div>
+            <p class="mt-4 text-dark leading-loose">
+              تقنية الاختراق الحيوي السريع (Bio-Transdermal Technology™) تنقل المواد الفعالة عبر طبقات الجلد الخمس مباشرة لعمق المفصل الملتهب.
+            </p>
+          </div>
+        </div>
+
+        <!-- Active ingredients -->
+        <h3 class="mt-14 text-xl sm:text-2xl font-extrabold text-center text-primary">المكونات الفعالة داخل كل أنبوب</h3>
+        <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="rounded-2xl border border-gray-100 bg-lightgray p-6 text-center">
+            <div class="text-4xl">🦴</div>
+            <h4 class="mt-4 font-extrabold text-dark">Glucosamine &amp; MSM</h4>
+            <p class="mt-2 text-sm text-gray-600 leading-loose">تحفيز ليونة الغضاريف وتقليل التآكل بين العظام.</p>
+          </div>
+          <div class="rounded-2xl border border-gray-100 bg-lightgray p-6 text-center">
+            <div class="text-4xl">🌶️</div>
+            <h4 class="mt-4 font-extrabold text-dark">Capsicum Extract</h4>
+            <p class="mt-2 text-sm text-gray-600 leading-loose">تنشيط الدورة الدموية وتوسيع الشعيرات لتدفق المغذيات.</p>
+          </div>
+          <div class="rounded-2xl border border-gray-100 bg-lightgray p-6 text-center">
+            <div class="text-4xl">🌿</div>
+            <h4 class="mt-4 font-extrabold text-dark">Arnica &amp; Ginger Oil</h4>
+            <p class="mt-2 text-sm text-gray-600 leading-loose">مضادات التهاب طبيعية قوية تزيل الانتفاخ والتصلب.</p>
+          </div>
+          <div class="rounded-2xl border border-gray-100 bg-lightgray p-6 text-center">
+            <div class="text-4xl">❄️</div>
+            <h4 class="mt-4 font-extrabold text-dark">Menthol</h4>
+            <p class="mt-2 text-sm text-gray-600 leading-loose">انتعاش وتسكين فوري لتهدئة الأنسجة الملتهبة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 5. TRIPLE PROOF STACK (Authority & Social Proof)               -->
+    <!-- ============================================================= -->
+    <section class="bg-primary py-14 sm:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+        <!-- Authority bar -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="bg-white rounded-2xl p-4 flex items-center justify-center">
+            <img src="images/onssa-logo.png" alt="ONSSA - المكتب الوطني للسلامة الصحية للمنتجات الغذائية"
+                 class="h-12 w-auto rounded-lg" width="382" height="78" loading="lazy">
+          </div>
+          <div class="bg-white/10 backdrop-blur rounded-2xl p-5 text-center text-white">
+            <div class="text-3xl">🌿</div>
+            <p class="mt-2 font-extrabold">100% Bio</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur rounded-2xl p-5 text-center text-white">
+            <div class="text-3xl">🏭</div>
+            <p class="mt-2 font-extrabold">Made to ISO Standards</p>
+          </div>
+        </div>
+
+        <!-- Guarantee box -->
+        <div class="mt-8 bg-white rounded-2xl p-6 sm:p-8 text-center">
+          <p class="text-dark font-bold text-base sm:text-lg leading-loose">
+            🛡️ يناسب كبار السن ومرضى السكري والضغط لأنه منتج طبيعي موضعيا ولا يؤثر على معدلات السكر أو الدم.
+          </p>
+        </div>
+
+        <!-- WhatsApp-style testimonials -->
+        <h3 class="mt-12 text-white text-xl sm:text-2xl font-extrabold text-center">آراء حقيقية من زبناء مغاربة</h3>
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+
+          <!-- Testimonial 1 -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-xl">
+            <div class="bg-[#075E54] text-white px-5 py-4 flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center font-black text-lg">إ</div>
+              <div>
+                <p class="font-extrabold leading-tight">حاج إبراهيم</p>
+                <p class="text-xs text-white/80">64 سنة - فاس · متصل الآن</p>
+              </div>
+              <div class="ms-auto text-yellow-300 text-sm">★★★★★</div>
+            </div>
+            <div class="p-5 bg-[#ECE5DD]">
+              <div class="bg-white rounded-xl rounded-tr-none p-4 shadow-sm">
+                <p class="text-dark leading-loose">
+                  بعدما استعملت كريم IBS+ منتظم مرتين فاليوم، الحمد لله رجعت كنتمشى للمسجد بدون عكاز والألم نقص بـ 80%.
+                </p>
+                <p class="mt-2 text-xs text-gray-400 text-left">✓✓ 10:42</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-xl">
+            <div class="bg-[#075E54] text-white px-5 py-4 flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center font-black text-lg">أ</div>
+              <div>
+                <p class="font-extrabold leading-tight">أم أمينة</p>
+                <p class="text-xs text-white/80">58 سنة - الدار البيضاء · متصل الآن</p>
+              </div>
+              <div class="ms-auto text-yellow-300 text-sm">★★★★★</div>
+            </div>
+            <div class="p-5 bg-[#ECE5DD]">
+              <div class="bg-white rounded-xl rounded-tr-none p-4 shadow-sm">
+                <p class="text-dark leading-loose">
+                  شارتو ليا بنتي وكنت خايفة يكون غير تكلاخ. ولكن فاش حليت الكرتونة وجربتو أمام الموزع تأكدت من الجودة.
+                </p>
+                <p class="mt-2 text-xs text-gray-400 text-left">✓✓ 19:05</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 6. PRICING BUNDLES & OFFER                                     -->
+    <!-- ============================================================= -->
+    <section class="bg-lightgray py-14 sm:py-20" id="pricing">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-center leading-[1.6]">
+          اختر العرض المناسب لك واسترجع عافيتك اليوم!
+        </h2>
+
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-5 items-stretch">
+
+          <!-- BUNDLE 1 -->
+          <button type="button" data-bundle="bundle-1" data-price="299 درهم" data-label="تجربة فردية"
+                  class="bundle-card relative bg-white rounded-2xl border-2 border-gray-200 p-7 text-center cursor-pointer flex flex-col hover:border-accent/60">
+            <h3 class="text-xl font-extrabold text-dark">أنبوب واحد (100ml)</h3>
+            <p class="mt-1 text-sm text-gray-500 font-semibold">تجربة فردية</p>
+            <div class="mt-6">
+              <span class="text-4xl font-black text-primary">299 درهم</span>
+            </div>
+            <p class="mt-4 text-sm font-bold text-accent">🚚 التوصيل مجاني</p>
+            <span class="mt-6 block w-full min-h-[48px] rounded-xl bg-lightgray text-primary font-extrabold flex items-center justify-center">
+              اختر هذا العرض
+            </span>
+          </button>
+
+          <!-- BUNDLE 2 (highlighted) -->
+          <button type="button" data-bundle="bundle-2" data-price="499 درهم" data-label="علاج مكتمل"
+                  class="bundle-card relative bg-white rounded-2xl border-2 border-accent p-7 text-center cursor-pointer flex flex-col shadow-xl lg:scale-105 z-10">
+            <span class="absolute -top-3.5 right-1/2 translate-x-1/2 bg-accent text-white text-xs font-extrabold rounded-full px-4 py-1.5 shadow-lg whitespace-nowrap">
+              الأكثر طلباً ⭐
+            </span>
+            <h3 class="text-xl font-extrabold text-dark">أنبوبين (2x 100ml)</h3>
+            <p class="mt-1 text-sm text-primary font-bold">علاج مكتمل - موصى به</p>
+            <div class="mt-6">
+              <span class="block text-lg text-gray-400 line-through">598 درهم</span>
+              <span class="text-4xl font-black text-primary">499 درهم</span>
+              <span class="mt-2 inline-block bg-urgency/10 text-urgency text-xs font-extrabold rounded-full px-3 py-1">
+                توفير 100 درهم
+              </span>
+            </div>
+            <p class="mt-4 text-sm font-bold text-accent">🚚 التوصيل مجاني</p>
+            <span class="mt-6 block w-full min-h-[48px] rounded-xl bg-accent text-white font-extrabold flex items-center justify-center">
+              اختر هذا العرض
+            </span>
+          </button>
+
+          <!-- BUNDLE 3 -->
+          <button type="button" data-bundle="bundle-3" data-price="649 درهم" data-label="العرض العائلي"
+                  class="bundle-card relative bg-white rounded-2xl border-2 border-gray-200 p-7 text-center cursor-pointer flex flex-col hover:border-accent/60">
+            <h3 class="text-xl font-extrabold text-dark">3 أنابيب (3x 100ml)</h3>
+            <p class="mt-1 text-sm text-gray-500 font-semibold">العرض العائلي الاقتصادية</p>
+            <div class="mt-6">
+              <span class="block text-lg text-gray-400 line-through">897 درهم</span>
+              <span class="text-4xl font-black text-primary">649 درهم</span>
+              <span class="mt-2 inline-block bg-urgency/10 text-urgency text-xs font-extrabold rounded-full px-3 py-1">
+                توفير 248 درهم
+              </span>
+            </div>
+            <p class="mt-4 text-sm font-bold text-accent">🚚 التوصيل مجاني</p>
+            <span class="mt-6 block w-full min-h-[48px] rounded-xl bg-lightgray text-primary font-extrabold flex items-center justify-center">
+              اختر هذا العرض
+            </span>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 7. CHECKOUT / COD ORDER FORM                                   -->
+    <!-- ============================================================= -->
+    <section class="bg-white py-14 sm:py-20 scroll-mt-28" id="order-form">
+      <div class="max-w-xl mx-auto px-4 sm:px-6">
+        <div class="bg-lightgray rounded-3xl border border-gray-200 shadow-xl p-6 sm:p-9">
+          <h2 class="text-xl sm:text-2xl font-extrabold text-center leading-relaxed">
+            أدخل معلوماتك للطلب - الدفع بعد المعاينة عند الاستلام
+          </h2>
+
+          <form id="cod-form" class="mt-8 space-y-5" novalidate>
+            <!-- Full name -->
+            <div>
+              <label for="full-name" class="block text-sm font-bold text-dark mb-2">الاسم الكامل</label>
+              <input type="text" id="full-name" name="full_name" required autocomplete="name"
+                     placeholder="مثال: محمد العلوي"
+                     class="w-full min-h-[52px] rounded-xl border-2 border-gray-200 bg-white px-4 py-3 text-dark placeholder-gray-400 focus:border-accent focus:ring-0">
+            </div>
+
+            <!-- Phone -->
+            <div>
+              <label for="phone" class="block text-sm font-bold text-dark mb-2">رقم الهاتف</label>
+              <div class="relative">
+                <input type="tel" id="phone" name="phone" required inputmode="tel" autocomplete="tel"
+                       placeholder="6XXXXXXXX أو 7XXXXXXXX"
+                       class="w-full min-h-[52px] rounded-xl border-2 border-gray-200 bg-white px-4 py-3 pe-20 text-dark placeholder-gray-400 focus:border-accent focus:ring-0">
+                <span class="absolute inset-y-0 end-4 flex items-center text-sm font-bold text-gray-500 pointer-events-none">
+                  🇲🇦 +212
+                </span>
+              </div>
+              <p class="mt-1.5 text-xs text-gray-500">أدخل رقمك المغربي بدون الرمز الدولي أو معه</p>
+            </div>
+
+            <!-- City -->
+            <div>
+              <label for="city" class="block text-sm font-bold text-dark mb-2">المدينة</label>
+              <input type="text" id="city" name="city" required autocomplete="address-level2"
+                     placeholder="مثال: الدار البيضاء"
+                     class="w-full min-h-[52px] rounded-xl border-2 border-gray-200 bg-white px-4 py-3 text-dark placeholder-gray-400 focus:border-accent focus:ring-0">
+            </div>
+
+            <!-- Offer selection -->
+            <fieldset>
+              <legend class="block text-sm font-bold text-dark mb-2">اختر العرض</legend>
+              <div class="space-y-3">
+                <label class="flex items-center gap-3 min-h-[52px] rounded-xl border-2 border-gray-200 bg-white px-4 py-3 cursor-pointer has-[:checked]:border-accent has-[:checked]:bg-accent/5 transition-colors">
+                  <input type="radio" name="offer" value="bundle-1" class="w-5 h-5 accent-accent">
+                  <span class="font-semibold text-dark">أنبوب واحد - 299 درهم</span>
+                </label>
+                <label class="flex items-center gap-3 min-h-[52px] rounded-xl border-2 border-gray-200 bg-white px-4 py-3 cursor-pointer has-[:checked]:border-accent has-[:checked]:bg-accent/5 transition-colors">
+                  <input type="radio" name="offer" value="bundle-2" class="w-5 h-5 accent-accent" checked>
+                  <span class="font-semibold text-dark">أنبوبين - 499 درهم <span class="text-accent text-xs font-extrabold">(الأكثر طلباً)</span></span>
+                </label>
+                <label class="flex items-center gap-3 min-h-[52px] rounded-xl border-2 border-gray-200 bg-white px-4 py-3 cursor-pointer has-[:checked]:border-accent has-[:checked]:bg-accent/5 transition-colors">
+                  <input type="radio" name="offer" value="bundle-3" class="w-5 h-5 accent-accent">
+                  <span class="font-semibold text-dark">3 أنابيب - 649 درهم</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Submit -->
+            <button type="submit"
+                    class="w-full min-h-[60px] rounded-2xl bg-accent hover:bg-accent-dark text-white text-lg font-extrabold shadow-xl animate-cta-pulse transition-colors">
+              ✅ تأكيد الطلب الآن (الدفع عند الاستلام)
+            </button>
+
+          </form>
+
+          <!-- Guarantees -->
+          <ul class="mt-8 space-y-3 border-t border-gray-200 pt-6">
+            <li class="flex items-center gap-3 text-dark font-semibold">
+              <span class="w-9 h-9 rounded-full bg-accent/10 flex items-center justify-center shrink-0">🚚</span>
+              توصيل سريع خلال 24-48 ساعة
+            </li>
+            <li class="flex items-center gap-3 text-dark font-semibold">
+              <span class="w-9 h-9 rounded-full bg-accent/10 flex items-center justify-center shrink-0">📦</span>
+              معاينة الطرد قبل الدفع
+            </li>
+            <li class="flex items-center gap-3 text-dark font-semibold">
+              <span class="w-9 h-9 rounded-full bg-accent/10 flex items-center justify-center shrink-0">📞</span>
+              اتصل بنا للدعم أو الاستفسار
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 8. FAQ ACCORDION                                               -->
+    <!-- ============================================================= -->
+    <section class="bg-lightgray py-14 sm:py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-center">الأسئلة الشائعة</h2>
+
+        <div class="mt-8 space-y-4">
+
+          <!-- FAQ 1 -->
+          <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-right px-6 py-5 min-h-[64px]" aria-expanded="false">
+              <span class="font-extrabold text-dark">كيف أضمن أن هذا المنتج ليس مجرد إعلان كاذب؟</span>
+              <span class="faq-icon shrink-0 w-8 h-8 rounded-full bg-accent/10 text-accent flex items-center justify-center transition-transform">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </span>
+            </button>
+            <div class="faq-panel">
+              <div>
+                <p class="px-6 pb-6 text-gray-600 leading-loose">
+                  نحن نضمن لك حق معاينة المنتج بنفسك. عند وصول الموزع، يمكنك فتح الطرد وفحص أنبوب IBS+ والتأكد من الجودة قبل دفع أي درهم.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-right px-6 py-5 min-h-[64px]" aria-expanded="false">
+              <span class="font-extrabold text-dark">هل يناسب هذا الكريم الأشخاص الذين يعانون من تآكل الغضروف المتقدم؟</span>
+              <span class="faq-icon shrink-0 w-8 h-8 rounded-full bg-accent/10 text-accent flex items-center justify-center transition-transform">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </span>
+            </button>
+            <div class="faq-panel">
+              <div>
+                <p class="px-6 pb-6 text-gray-600 leading-loose">
+                  نعم، يقلل الاحتكاك المؤلم، يزيل التورم المحيط بالمفصل، ويعيد تدفق السائل المفصلي لمرونة أكبر.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-right px-6 py-5 min-h-[64px]" aria-expanded="false">
+              <span class="font-extrabold text-dark">هل هناك أي موانع للاستعمال؟</span>
+              <span class="faq-icon shrink-0 w-8 h-8 rounded-full bg-accent/10 text-accent flex items-center justify-center transition-transform">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </span>
+            </button>
+            <div class="faq-panel">
+              <div>
+                <p class="px-6 pb-6 text-gray-600 leading-loose">
+                  آمن 100% لمرضى السكري والضغط لأنه للاستعمال الخارجي فقط. يُفضل عدم وضعه على الجروح المفتوحة.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================= -->
+  <!-- FOOTER                                                         -->
+  <!-- ============================================================= -->
+  <footer class="bg-primary text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+      <p class="font-extrabold text-lg">IBS+ — Crème Douleurs Articulaires</p>
+      <p class="mt-2 text-white/80 text-sm">© 2026 جميع الحقوق محفوظة · التوصيل مجاني لجميع المدن المغربية</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================= -->
+  <!-- 9. STICKY MOBILE BOTTOM BAR (sm:hidden)                        -->
+  <!-- ============================================================= -->
+  <div class="fixed bottom-0 inset-x-0 z-50 sm:hidden bg-white border-t-2 border-accent shadow-[0_-8px_24px_rgba(0,0,0,0.12)]">
+    <div class="flex items-center gap-3 px-4 py-3">
+      <div class="leading-tight">
+        <p class="text-xs text-gray-500 font-semibold">العرض المختار</p>
+        <p class="text-primary font-black text-lg"><span id="sticky-price">499 درهم</span> <span class="text-xs text-gray-500 font-bold" id="sticky-label">(علاج مكتمل)</span></p>
+      </div>
+      <a href="#order-form" data-scroll-to-form
+         class="ms-auto flex-1 max-w-[220px] min-h-[48px] rounded-xl bg-accent text-white font-extrabold text-sm flex items-center justify-center shadow-lg animate-cta-pulse">
+        أطلب الآن - 499 درهم (علاج مكتمل)
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- INTERACTIVE JS                                                 -->
+  <!-- ============================================================= -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---------- 1. Bundle selection ↔ form radio sync ---------- */
+      var bundleCards = document.querySelectorAll('.bundle-card');
+      var offerRadios = document.querySelectorAll('input[name="offer"]');
+      var stickyPrice = document.getElementById('sticky-price');
+      var stickyLabel = document.getElementById('sticky-label');
+      var stickyCta = document.querySelector('[data-scroll-to-form].animate-cta-pulse');
+
+      function applySelection(bundleId, price, label) {
+        bundleCards.forEach(function (card) {
+          card.setAttribute('data-active', card.getAttribute('data-bundle') === bundleId ? 'true' : 'false');
+        });
+        offerRadios.forEach(function (radio) {
+          radio.checked = radio.value === bundleId;
+        });
+        if (stickyPrice && price) stickyPrice.textContent = price;
+        if (stickyLabel && label) stickyLabel.textContent = '(' + label + ')';
+      }
+
+      bundleCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+          applySelection(
+            card.getAttribute('data-bundle'),
+            card.getAttribute('data-price'),
+            card.getAttribute('data-label')
+          );
+        });
+      });
+
+      offerRadios.forEach(function (radio) {
+        radio.addEventListener('change', function () {
+          var card = document.querySelector('.bundle-card[data-bundle="' + radio.value + '"]');
+          if (card) {
+            applySelection(radio.value, card.getAttribute('data-price'), card.getAttribute('data-label'));
+          }
+        });
+      });
+
+      /* Initialize with the recommended bundle */
+      var initCard = document.querySelector('.bundle-card[data-bundle="bundle-2"]');
+      if (initCard) applySelection('bundle-2', initCard.getAttribute('data-price'), initCard.getAttribute('data-label'));
+
+      /* ---------- 2. FAQ accordion ---------- */
+      document.querySelectorAll('.faq-trigger').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var panel = trigger.nextElementSibling;
+          var icon = trigger.querySelector('.faq-icon');
+          var isOpen = panel.classList.contains('open');
+
+          /* Close all */
+          document.querySelectorAll('.faq-panel').forEach(function (p) { p.classList.remove('open'); });
+          document.querySelectorAll('.faq-trigger').forEach(function (t) {
+            t.setAttribute('aria-expanded', 'false');
+            var i = t.querySelector('.faq-icon');
+            if (i) i.style.transform = 'rotate(0deg)';
+          });
+
+          /* Open clicked (unless it was already open) */
+          if (!isOpen) {
+            panel.classList.add('open');
+            trigger.setAttribute('aria-expanded', 'true');
+            if (icon) icon.style.transform = 'rotate(180deg)';
+          }
+        });
+      });
+
+      /* ---------- 3. Smooth scrolling to #order-form ---------- */
+      document.querySelectorAll('[data-scroll-to-form], a[href="#order-form"]').forEach(function (el) {
+        el.addEventListener('click', function (e) {
+          var target = document.getElementById('order-form');
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      /* ---------- 4. COD form submission ---------- */
+      var form = document.getElementById('cod-form');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          var name = document.getElementById('full-name');
+          var phone = document.getElementById('phone');
+          var city = document.getElementById('city');
+          var valid = true;
+
+          [name, phone, city].forEach(function (field) {
+            if (!field.value.trim()) {
+              field.classList.add('border-urgency');
+              valid = false;
+            } else {
+              field.classList.remove('border-urgency');
+            }
+          });
+
+          var digits = phone.value.replace(/\D/g, '');
+          if (digits.length < 9) {
+            phone.classList.add('border-urgency');
+            valid = false;
+          }
+
+          if (!valid) return;
+
+          /* Redirect to the thank-you page with the order summary */
+          var selected = form.querySelector('input[name="offer"]:checked');
+          var params = new URLSearchParams();
+          params.set('name', name.value.trim());
+          params.set('offer', selected ? selected.value : 'bundle-2');
+          window.location.href = 'thank-you.html?' + params.toString();
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
